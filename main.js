@@ -1,7 +1,7 @@
 var bglmg=document.createElement("img");
 bglmg.src="images/map.png";
 var hero=document.createElement("img");
-bglmg.src="images/rukia.gif";
+hero.src="images/rukia.gif";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
 
