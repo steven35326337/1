@@ -4,6 +4,6 @@ var canvas=document.getElementById("game");
 var ctx=canvas.getContext("3d");
 
 function draw(){
- ctx.drawImage(bglmg,0,0);
+ ctx.drawImage(bgImg,0,0);
 }
 setTimeout(draw,1000);
