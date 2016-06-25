@@ -1,7 +1,7 @@
 var bglmg=document.createElement("img");
 bglmg.src="images/map.png";
 var canvas=document.getElementById("game");
-var ctx=canvas.getContext("3d");
+var ctx=canvas.getContext("2d");
 
 function draw(){
  ctx.drawImage(bgImg,0,0);
