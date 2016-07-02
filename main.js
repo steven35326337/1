@@ -9,6 +9,14 @@ tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
 
+var isb=false;
+$("#game").click(function(event){
+ isb=false;
+ if(event.offsetX>520&&event.offsetY>360){
+  isb=true;
+ }
+});
+
 var xy={x:0,y:0}
 setTimeout(draw,1000);
 $("#game").mousemove(function(event){
@@ -23,4 +31,4 @@ function draw(){
  ctx.drawImage(tlmg,xy.x,xy.y);
 }
 
-setInterval(draw,16);
+setInterval(draw,300);
