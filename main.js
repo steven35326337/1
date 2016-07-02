@@ -22,8 +22,8 @@ $("#game").click(function(event){
 });
 
 var t={
- x:0;
- y:0;
+ x:0,
+ y:0
 };
 
 var xy={x:0,y:0}
