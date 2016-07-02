@@ -14,7 +14,11 @@ $("#game").click(function(event){
  isb=false;
  if(event.offsetX>520&&event.offsetY>360){
   isb=true;
+ }else{
+  tower.x=event.offsetX-event.offsetX%32;
+  tower.y=event.offsetY-event.offsetY%32;
  }
+ isb=false;
 });
 
 var xy={x:0,y:0}
@@ -28,7 +32,13 @@ function draw(){
  ctx.drawImage(bglmg,0,0);
  ctx.drawImage(hero,hero.x,hero.y);
  ctx.drawImage(ctlmg,440,280,200,200);
- ctx.drawImage(tlmg,xy.x,xy.y);
+ if(isb==true){
+  ctx.drawImage(tlmg,xy.x,xy.y);
+ }
+ else{
+  ctx.drawImage(tlmg,tower.x,tower.y);
+ }
+ 
 }
 
 setInterval(draw,3);
