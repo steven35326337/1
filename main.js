@@ -9,6 +9,7 @@ var ctx=canvas.getContext("2d");
 
 function draw(){
  ctx.drawImage(bglmg,0,0);
- ctx.drawImage(hero,0,0);
+ ctx.drawImage(hero,hero.x,hero.y);
+ ctx.drawImage(ctimg,520,360,120,120);
 }
 setTimeout(draw,1000);
