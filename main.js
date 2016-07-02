@@ -1,5 +1,5 @@
 var bglmg=document.createElement("img");
-bglmg.src="images/未命名.png";
+bglmg.src="images/666.png";
 var hero=document.createElement("img");
 hero.src="images/rukia.gif";
 var ctlmg=document.createElement("img");
