@@ -2,6 +2,8 @@ var bglmg=document.createElement("img");
 bglmg.src="images/map.png";
 var hero=document.createElement("img");
 hero.src="images/rukia.gif";
+var ctlmg=document.createElement("img");
+ctimg.src="images/tower-btn.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
 
