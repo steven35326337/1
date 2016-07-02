@@ -22,8 +22,8 @@ $("#game").click(function(event){
 });
 
 var t={
- x:0
- y:0
+ x:0;
+ y:0;
 };
 
 var xy={x:0,y:0}
@@ -36,12 +36,12 @@ $("#game").mousemove(function(event){
 function draw(){
  ctx.drawImage(bglmg,0,0);
  ctx.drawImage(hero,hero.x,hero.y);
- ctx.drawImage(ctlmg,440,280,200,200);
+ ctx.drawImage(ctlmg,620,460,20,60);
  if(isb==true){
   ctx.drawImage(tlmg,xy.x,xy.y);
  }
  else{
-  ctx.drawImage(tlmg,tower.x,tower.y);
+  ctx.drawImage(tlmg,t.x,t.y);
  }
  
 }
