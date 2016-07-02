@@ -23,3 +23,4 @@ function draw(){
  ctx.drawImage(tlmg,xy.x,xy.y);
 }
 
+setInterval(draw,16);
