@@ -13,3 +13,6 @@ function draw(){
  ctx.drawImage(ctlmg,520,360,120,120);
 }
 setTimeout(draw,1000);
+$("#1").mousemove(function(event){
+ console.log((x;)+event.offsetX+",y;"+event.offsetY);
+});
