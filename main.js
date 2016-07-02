@@ -21,6 +21,11 @@ $("#game").click(function(event){
  isb=false;
 });
 
+var t={
+ x:0
+ y:0
+};
+
 var xy={x:0,y:0}
 setTimeout(draw,1000);
 $("#game").mousemove(function(event){
