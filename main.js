@@ -14,5 +14,5 @@ function draw(){
 }
 setTimeout(draw,1000);
 $("#1").mousemove(function(event){
- console.log((x;)+event.offsetX+",y;"+event.offsetY);
+ console.log("x:"+event.offsetX+",y:"+event.offsetY);
 });
