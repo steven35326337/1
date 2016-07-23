@@ -8,6 +8,12 @@ var tlmg=document.createElement("img");
 tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
+var gg={
+ x=320
+ y=448
+}
+
+
 var t={
  x:0,
  y:0
