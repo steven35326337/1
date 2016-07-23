@@ -8,6 +8,10 @@ var tlmg=document.createElement("img");
 tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
+var t={
+ x:0,
+ y:0
+};
 
 var isb=false;
 $("#game").click(function(event){
@@ -23,10 +27,6 @@ $("#game").click(function(event){
  }
 });
 
-var t={
- x:0,
- y:0
-};
 
 var xy={x:0,y:0}
 setTimeout(draw,1000);
