@@ -51,7 +51,7 @@ $("#game").mousemove(function(event){
 function draw(){
  ctx.drawImage(bglmg,0,0);
  enemy.move();
- ctx.drawImage(hero,hero.x,hero.y);
+ ctx.drawImage(hero,enemy.x,enemy.y);
  ctx.drawImage(ctlmg,620,460,20,60);
  if(isb==true){
   ctx.drawImage(tlmg,xy.x,xy.y);
