@@ -9,6 +9,16 @@ tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
 
+var enemy={
+ x:320,
+ y:448,
+ speed:6,
+ direction:{x:0,y:-1},
+ move:function(){
+  this.x=this.x+this.direction.x*this.speed/FPS;
+  this.y=this.y+this.direction.y*this.speed/FPS;
+ }
+}
 
 
 var t={
