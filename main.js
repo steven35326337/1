@@ -15,8 +15,8 @@ $("#game").click(function(event){
  if(event.offsetX>520&&event.offsetY>360){
   isb=true;
  }else{
-  tower.x=event.offsetX-event.offsetX%32;
-  tower.y=event.offsetY-event.offsetY%32;
+  tlmg.x=event.offsetX-event.offsetX%32;
+  tlmg.y=event.offsetY-event.offsetY%32;
  }
  isb=false;
 });
