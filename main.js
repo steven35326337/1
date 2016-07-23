@@ -1,3 +1,4 @@
+var FPS = 60;
 var bglmg=document.createElement("img");
 bglmg.src="images/666.png";
 var hero=document.createElement("img");
@@ -12,7 +13,7 @@ var ctx=canvas.getContext("2d");
 var enemy={
  x:320,
  y:448,
- speed:6,
+ speed:64,
  direction:{x:0,y:-1},
  move:function(){
   this.x=this.x+this.direction.x*this.speed/FPS;
