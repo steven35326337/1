@@ -15,10 +15,12 @@ $("#game").click(function(event){
  if(event.offsetX>520&&event.offsetY>360){
   isb=true;
  }else{
+  if(isb==true){
   t.x=event.offsetX-event.offsetX%32;
   t.y=event.offsetY-event.offsetY%32;
  }
  isb=false;
+ }
 });
 
 var t={
