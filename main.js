@@ -62,4 +62,4 @@ function draw(){
  
 }
 
-setInterval(draw,3);
+setInterval(draw,1000/FPS);
