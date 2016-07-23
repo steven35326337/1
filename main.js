@@ -8,10 +8,7 @@ var tlmg=document.createElement("img");
 tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
-var gg={
- x=320
- y=448
-}
+
 
 
 var t={
@@ -42,7 +39,7 @@ $("#game").mousemove(function(event){
 
 function draw(){
  ctx.drawImage(bglmg,0,0);
- ctx.drawImage(hero,hero.x,hero.y);
+ ctx.drawmage(hero,320,488);
  ctx.drawImage(ctlmg,620,460,20,60);
  if(isb==true){
   ctx.drawImage(tlmg,xy.x,xy.y);
