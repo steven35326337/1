@@ -15,7 +15,6 @@ var t={
 
 var isb=false;
 $("#game").click(function(event){
- isb=false;
  if(event.offsetX>520&&event.offsetY>360){
   isb=true;
  }else{
