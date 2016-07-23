@@ -39,7 +39,7 @@ $("#game").mousemove(function(event){
 
 function draw(){
  ctx.drawImage(bglmg,0,0);
- ctx.drawmage(hero,320,488);
+ ctx.drawImage(hero,320,488);
  ctx.drawImage(ctlmg,620,460,20,60);
  if(isb==true){
   ctx.drawImage(tlmg,xy.x,xy.y);
