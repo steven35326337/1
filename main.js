@@ -41,27 +41,25 @@ var enemy={
   if(isc(ep[this.pathDes].x,ep[this.pathDes].y,this.x,this.y,this.speed/FPS,this.speed/FPS)){
    this.x=ep[this.pathDes].x;
    this.y=ep[this.pathDes].y;
-    this.x=this.x+this.direction.x*this.speed/FPS;
-  this.y=this.y+this.direction.y*this.speed/FPS;
-  this.pathDes+=1;
-  if(ep[this.pathDes].x>this.x{
-   this.direction={x:1,y:0}
+    
+   this.pathDes+=1;
+   if(ep[this.pathDes].x>this.x{
+    this.direction={x:1,y:0}
+   }
+   else if(ep[this.pathDes].x<this.x{
+    this.direction={x:-1,y:0}
+   }
+   else if(ep[this.pathDes].y>this.y{
+    this.direction={x:0,y:1}
+   }
+   else if(ep[this.pathDes].y<this.y{
+    this.direction={x:0,y:-1}
+   }
   }
-  else if(ep[this.pathDes].x<this.x{
-   this.direction={x:-1,y:0}{
- 
-  
- }
- else if(ep[this.pathDes].y>this.y{
-   this.direction={x:0,y:1}{
- 
-  
- }
-  else if(ep[this.pathDes].y<this.y{
-   this.direction={x:0,y:-1}{
- 
-  
- }
+  else{
+   this.x=this.x+this.direction.x*this.speed/FPS;
+   this.y=this.y+this.direction.y*this.speed/FPS;
+  }
 }
 
 
