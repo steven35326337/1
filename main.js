@@ -35,7 +35,7 @@ var enemy={
  x:320,
  y:448,
  speed:64,
- pathDes;0,
+ pathDes:0,
  direction:{x:0,y:-1},
  move:function(){
   if(isc(ep[this.pathDes].x,ep[this.pathDes].y,this.x,this.y,this.speed/FPS,this.speed/FPS)){
