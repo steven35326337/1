@@ -43,16 +43,16 @@ var enemy={
    this.y=ep[this.pathDes].y;
     
    this.pathDes+=1;
-   if(ep[this.pathDes].x>this.x{
+   if(ep[this.pathDes].x>this.x){
     this.direction={x:1,y:0}
    }
-   else if(ep[this.pathDes].x<this.x{
+   else if(ep[this.pathDes].x<this.x){
     this.direction={x:-1,y:0}
    }
-   else if(ep[this.pathDes].y>this.y{
+   else if(ep[this.pathDes].y>this.y){
     this.direction={x:0,y:1}
    }
-   else if(ep[this.pathDes].y<this.y{
+   else if(ep[this.pathDes].y<this.y){
     this.direction={x:0,y:-1}
    }
   }
