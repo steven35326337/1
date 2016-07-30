@@ -60,6 +60,7 @@ var enemy={
    this.x=this.x+this.direction.x*this.speed/FPS;
    this.y=this.y+this.direction.y*this.speed/FPS;
   }
+ }
 }
 
 
