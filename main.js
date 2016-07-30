@@ -9,7 +9,28 @@ var tlmg=document.createElement("img");
 tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
-
+var ep=[
+ {x:320,y:352},
+ {x:0,y:352},
+ {x:0,y:0},
+ {x:96,y:0},
+ {x:96,y:288},
+ {x:192,y:288},
+ {x:192,y:32},
+ {x:544,y:32},
+ {x:544,y:128}
+ ];  
+ function isc(pointX,pointY,targetX,targetY,targetWidth,targetHeight){
+  if(  pointX>=targetX
+  && pointX<=targetX+targetWidth
+  && pointY>=targetY
+  && pointY<=targetY+targetHeight
+  ){
+   return true;
+  }else{
+   return false;
+  }
+ }
 var enemy={
  x:320,
  y:448,
