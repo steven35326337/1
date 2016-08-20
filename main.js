@@ -90,7 +90,7 @@ $("#game").mousemove(function(event){
 function draw(){
 	if(clock % 80 == 0){
 		var enemy=new Enemy();
-		enemies.push(ememy);
+		enemies.push(enemy);
 	}
 	clock++;
 	ctx.drawImage(bglmg,0,0);
