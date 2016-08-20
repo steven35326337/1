@@ -33,13 +33,13 @@ function isc(pointX,pointY,targetX,targetY,targetWidth,targetHeight){
 	}
 }
 
-var enemy={
-	x:320,
-	y:448,
-	speed:64,
-	pathDes:0,
-	direction:{x:0,y:-1},
-	move:function(){
+function Enemy(){
+	this.x=320,
+	this.y=448,
+	this.speed=64,
+	this.pathDes=0,
+	this.direction={x:0,y:-1},
+	this.move=function(){
  		if(isc(ep[this.pathDes].x,ep[this.pathDes].y,this.x,this.y,this.speed/FPS,this.speed/FPS)){
 			this.x=ep[this.pathDes].x;
 			this.y=ep[this.pathDes].y;
@@ -59,7 +59,7 @@ var enemy={
   		}
 	}
 };
-
+var enemy=new Enemy();
 var t={
  x:0,
  y:0
