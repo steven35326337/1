@@ -1,3 +1,4 @@
+var clock=0;
 var FPS = 60;
 var bglmg=document.createElement("img");
 bglmg.src="images/666.png";
@@ -59,7 +60,7 @@ function Enemy(){
   		}
 	}
 };
-var enemy=new Enemy();
+var enemies=[]
 var t={
  x:0,
  y:0
@@ -87,9 +88,16 @@ $("#game").mousemove(function(event){
 });
 
 function draw(){
+	if(clock % 80 == 0){
+		var enemy=new Enemy();
+		enemies.push(ememy);
+	}
+	clock++;
 	ctx.drawImage(bglmg,0,0);
-	enemy.move();
-	ctx.drawImage(hero,enemy.x,enemy.y);
+        for(var i=0;i<enemies.length;i++){
+        	enemies[i].move();
+        	ctx.drawImage(hero,enemies[i].x,enemies[i].y);
+        }
 	ctx.drawImage(ctlmg,620,460,20,60);
 	if(isb==true){
 		ctx.drawImage(tlmg,xy.x,xy.y);
