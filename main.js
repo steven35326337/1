@@ -11,6 +11,8 @@ var tlmg=document.createElement("img");
 tlmg.src="images/tower.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
+ctx.font="24px Arial";
+ctx.fillStyle="cyan";
 var ep=[
 	{x:320,y:352},
 	{x:0,y:352},
@@ -105,7 +107,7 @@ function draw(){
 	}
 	else{
 		ctx.drawImage(tlmg,t.x,t.y);
-		ctx.fillText(treeHP,100,100);
+		ctx.fillText(treeHP,0,95);
 	}
 }
 
