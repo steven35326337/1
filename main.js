@@ -80,7 +80,7 @@ var t={
  searchEnemy:function(){
  	for(var i = 0;i < enemies.length;i++){
  		var distance=Math.sqrt(
- 			math.pow(this.x-enemies[i].x,2)+math.pow(this.y-enemies[i].y,2)
+ 			Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
  			);if(distance<=this.range){
  				this.aimingEnemyid=i;
  				return;
