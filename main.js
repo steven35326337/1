@@ -84,7 +84,7 @@ var t={
  				return;
  			}
  	}
- aimingEnemyid:null,	
+ aimingEnemyid=null,	
  }
 };
 
