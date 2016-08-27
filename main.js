@@ -107,7 +107,7 @@ function draw(){
 	}
 	else{
 		ctx.drawImage(tlmg,t.x,t.y);
-		ctx.fillText(treeHP,65,0);
+		ctx.fillText("HP:"+treeHP,65,0);
 	}
 }
 
