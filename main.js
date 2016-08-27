@@ -49,6 +49,11 @@ function Enemy(){
 			this.x=ep[this.pathDes].x;
 			this.y=ep[this.pathDes].y;
 			this.pathDes+=1;
+			if(this.pathDes>=ep.length){
+				this.HP=0;
+				treeHP = treeHP-7;
+				return;
+			}
 			if(ep[this.pathDes].x>this.x){
 				this.direction={x:1,y:0}
 			} else if(ep[this.pathDes].x<this.x){
@@ -98,9 +103,13 @@ function draw(){
 	}
 	clock++;
 	ctx.drawImage(bglmg,0,0);
-        for(var i=0;i<enemies.length;i++){
+            for(var i = 0;i < enemies.length;i++){
+        	if (enemies[i].HP<=0){
+        		enemies.splice(i,1);
+        	}else{
         	enemies[i].move();
         	ctx.drawImage(hero,enemies[i].x,enemies[i].y);
+        	}
         }
 	ctx.drawImage(ctlmg,620,460,20,60);
 	if(isb==true){
