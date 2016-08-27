@@ -9,6 +9,8 @@ var ctlmg=document.createElement("img");
 ctlmg.src="images/tower-btn.png";
 var tlmg=document.createElement("img");
 tlmg.src="images/tower.png";
+var crosshairlmg=document.createElement("img");
+crosshairlmg.src="images/crosshair.png";
 var canvas=document.getElementById("game");
 var ctx=canvas.getContext("2d");
 ctx.font="24px Arial";
@@ -132,6 +134,11 @@ function draw(){
 	else{
 		ctx.drawImage(tlmg,t.x,t.y);
 		ctx.fillText("HP:"+treeHP,65,32);
+		t.searchEnemy();
+		if(t.aimingEnemyid!=null){
+			var id=t.aimingEnemyid;
+			ctx.drawImage(crosshairlmg,enemies[id].x,enemies[id].y);
+		}
 	}
 }
 
