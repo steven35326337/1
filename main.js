@@ -82,7 +82,6 @@ var t={
  		var distance=Math.sqrt(
  			Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
  		);
- 		console
  		if(distance<=this.range){
  			this.aimingEnemyid=i;
  			return;
