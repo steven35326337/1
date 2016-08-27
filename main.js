@@ -74,7 +74,7 @@ var t={
  x:0,
  y:0,
  range:9,
- aimingEnemyid:null',
+ aimingEnemyid:null,
  searchEnemy:function(){
  	for(var i = 0;i < enemies.length;i++){
  		var distance=Math.sqrt(
@@ -84,6 +84,7 @@ var t={
  				return;
  			}
  	}
+ aimingEnemyid:null,	
  }
 };
 
