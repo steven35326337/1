@@ -141,7 +141,7 @@ function draw(){
 		}
 	}
 	if(t.aimingEnemyid!=null){
-		enemies[t.aimingEnemyid].x
+		ctx.drawImage(tlmg,enemies[t.aimingEnemyid].x,enemies[t.aimingEnemyid].y);
 	}
 }
 
