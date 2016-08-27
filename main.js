@@ -38,6 +38,7 @@ function isc(pointX,pointY,targetX,targetY,targetWidth,targetHeight){
 }
 
 function Enemy(){
+	this.HP=100
 	this.x=320,
 	this.y=448,
 	this.speed=64,
@@ -107,7 +108,7 @@ function draw(){
 	}
 	else{
 		ctx.drawImage(tlmg,t.x,t.y);
-		ctx.fillText("HP:"+treeHP,65,0);
+		ctx.fillText("HP:"+treeHP,65,32);
 	}
 }
 
