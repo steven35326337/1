@@ -89,7 +89,6 @@ $("#game").mousemove(function(event){
 });
 
 function draw(){
-	ctx.fillText(treeHP,100,100);
 	if(clock % 80 == 0){
 		var enemy=new Enemy();
 		enemies.push(enemy);
@@ -106,6 +105,7 @@ function draw(){
 	}
 	else{
 		ctx.drawImage(tlmg,t.x,t.y);
+		ctx.fillText(treeHP,100,100);
 	}
 }
 
