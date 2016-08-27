@@ -140,6 +140,9 @@ function draw(){
 			ctx.drawImage(crosshairlmg,enemies[id].x,enemies[id].y);
 		}
 	}
+	if(t.aimingEnemyid!=null){
+		enemies[t.aimingEnemyid].x
+	}
 }
 
 setInterval(draw,1000/FPS);
