@@ -75,16 +75,18 @@ var enemies=[]
 var t={
  x:0,
  y:0,
- range:9,
+ range:96,
  aimingEnemyid:null,
  searchEnemy:function(){
  	for(var i = 0;i < enemies.length;i++){
  		var distance=Math.sqrt(
  			Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
- 			);if(distance<=this.range){
- 				this.aimingEnemyid=i;
- 				return;
- 			}
+ 		);
+ 		console
+ 		if(distance<=this.range){
+ 			this.aimingEnemyid=i;
+ 			return;
+ 		}
  	}
  aimingEnemyid=null;	
  }
