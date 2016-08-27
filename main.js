@@ -72,8 +72,21 @@ function Enemy(){
 var enemies=[]
 var t={
  x:0,
- y:0
+ y:0,
+ range:9,
+ aimingEnemyid:null',
+ searchEnemy:function(){
+ 	for(var i = 0;i < enemies.length;i++){
+ 		var distance=Math.sqrt(
+ 			math.pow(this.x-enemies[i].x,2)+math.pow(this.y-enemies[i].y,2)
+ 			);if(distance<=this.range){
+ 				this.aimingEnemyid=i;
+ 				return;
+ 			}
+ 	}
+ }
 };
+
 
 var isb=false;
 $("#game").click(function(event){
