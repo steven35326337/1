@@ -1,3 +1,4 @@
+var treeHP=100;
 var clock=0;
 var FPS = 60;
 var bglmg=document.createElement("img");
@@ -88,6 +89,7 @@ $("#game").mousemove(function(event){
 });
 
 function draw(){
+	ctx.fillText(treeHP,100,100);
 	if(clock % 80 == 0){
 		var enemy=new Enemy();
 		enemies.push(enemy);
