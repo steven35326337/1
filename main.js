@@ -71,7 +71,7 @@ function Enemy(){
   		}
 	}
 };
-var enemies=[]
+var enemies=[];
 var t={
 shoot:function(id){
 ctx.beginPath();
