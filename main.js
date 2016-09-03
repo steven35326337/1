@@ -73,17 +73,34 @@ function Enemy(){
 };
 var enemies=[]
 var t={
+shoot:function(id){
+ctx.beginPath();
+ctx.moveTo(this.x + 16,this.y);
+ctx.lineTo(enemies[id].x + 16,enemies[id].y);
+ctx.strokeStyle='red';
+ctx.lineWidth=3;
+ctx.stroke();
+enemies[id].hp-=this.damage;
+},
+fireRate:0.75,
+readyShoot:0.75,
+damage:7,
  x:0,
  y:0,
  range:96,
  aimingEnemyid:null,
  searchEnemy:function(){
+ 	this.readyShoot-=1/FPS
  	for(var i = 0;i < enemies.length;i++){
  		var distance=Math.sqrt(
  			Math.pow(this.x-enemies[i].x,2)+Math.pow(this.y-enemies[i].y,2)
  		);
  		if(distance<=this.range){
  			this.aimingEnemyid=i;
+ 			if(this.readyShoot<=0){
+ 				this.shoot();
+ 				this.readyShoot=this.fireRate;
+ 			}
  			return;
  		}
  	}
