@@ -80,7 +80,7 @@ ctx.lineTo(enemies[id].x + 16,enemies[id].y);
 ctx.strokeStyle='red';
 ctx.lineWidth=3;
 ctx.stroke();
-enemies[id].hp-=this.damage;
+enemies[id].HP-=this.damage;
 },
 fireRate:0.75,
 readyShoot:0.75,
