@@ -140,7 +140,7 @@ function draw(){
 	clock++;
 	ctx.drawImage(bglmg,0,0);
             for(var i = 0;i < enemies.length;i++){
-        	if (enemies[i].HP<=0){
+        	if (enemies[i].hp<=0){
         		enemies.splice(i,1);
         	}else{
         	enemies[i].move();
