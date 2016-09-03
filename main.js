@@ -40,7 +40,7 @@ function isc(pointX,pointY,targetX,targetY,targetWidth,targetHeight){
 }
 
 function Enemy(){
-	this.HP=100
+	this.hp=100
 	this.x=320,
 	this.y=448,
 	this.speed=64,
@@ -80,7 +80,7 @@ ctx.lineTo(enemies[id].x + 16,enemies[id].y);
 ctx.strokeStyle='red';
 ctx.lineWidth=3;
 ctx.stroke();
-enemies[id].HP-=this.damage;
+enemies[id].hp-=this.damage;
 },
 fireRate:0.75,
 readyShoot:0.75,
