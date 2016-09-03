@@ -1,4 +1,6 @@
 var treeHP=100;
+var score=0;
+var money=0;
 var clock=0;
 var FPS = 60;
 var bglmg=document.createElement("img");
