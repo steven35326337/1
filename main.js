@@ -98,7 +98,7 @@ damage:7,
  		if(distance<=this.range){
  			this.aimingEnemyid=i;
  			if(this.readyShoot<=0){
- 				this.shoot();
+ 				this.shoot(i);
  				this.readyShoot=this.fireRate;
  			}
  			return;
