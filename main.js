@@ -84,7 +84,7 @@ enemies[id].hp-=this.damage;
 },
 fireRate:0.75,
 readyShoot:0.75,
-damage:7,
+damage:50,
  x:0,
  y:0,
  range:96,
