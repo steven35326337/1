@@ -74,8 +74,8 @@ function Enemy(){
 	}
 };
 var enemies=[];
-function t({
-shoot:function(id){
+function t(){
+this.shoot=function(id){
 ctx.beginPath();
 ctx.moveTo(this.x + 16,this.y);
 ctx.lineTo(enemies[id].x + 16,enemies[id].y);
@@ -83,7 +83,7 @@ ctx.strokeStyle='red';
 ctx.lineWidth=3;
 ctx.stroke();
 enemies[id].hp-=this.damage;
-},
+};
   this.fireRate=0.75;
   this.readyShoot=0.75;
   this.damage=50;
