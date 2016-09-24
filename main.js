@@ -118,8 +118,8 @@ $("#game").click(function(event){
 	}else{
 		if(isb==true){
 			var tower = new Tower();
-			t.x=event.offsetX-event.offsetX % 32;
-			t.y=event.offsetY-event.offsetY % 32;
+			tower.x=event.offsetX-event.offsetX % 32;
+			tower.y=event.offsetY-event.offsetY % 32;
 			towers.push(tower);
 		}
 		isb=false;
