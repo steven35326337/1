@@ -164,4 +164,4 @@ function draw(){
 	}
 }
 
-setInterval(draw,1000/FPS);
+var setIntervalID(draw,1000/FPS);
