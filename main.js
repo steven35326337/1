@@ -154,7 +154,7 @@ function draw(){
 		ctx.drawImage(tlmg,xy.x,xy.y);
 	}
 	for(var i = 0; i<towers.length;i++){
-		ctx.drawImage(tlmg,towers[i].x,tower[i].y);
+		ctx.drawImage(tlmg,towers[i].x,towers[i].y);
 		ctx.fillText("HP:"+treeHP,65,32);
 		towers[i].searchEnemy();
 		if(towers[i].aimingEnemyid!=null){
