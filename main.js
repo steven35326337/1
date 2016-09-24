@@ -74,7 +74,7 @@ function Enemy(){
 	}
 };
 var enemies=[];
-var t={
+function t={
 shoot:function(id){
 ctx.beginPath();
 ctx.moveTo(this.x + 16,this.y);
@@ -84,13 +84,13 @@ ctx.lineWidth=3;
 ctx.stroke();
 enemies[id].hp-=this.damage;
 },
-fireRate:0.75,
-readyShoot:0.75,
-damage:50,
- x:0,
- y:0,
- range:96,
- aimingEnemyid:null,
+  this.fireRate=0.75;
+  this.readyShoot=0.75;
+  this.damage=50;
+  this. x=0;
+  this.y=0;
+  this.range=96;
+  this.aimingEnemyid=null;
  searchEnemy:function(){
  	this.readyShoot-=1/FPS
  	for(var i = 0;i < enemies.length;i++){
@@ -109,7 +109,7 @@ damage:50,
  aimingEnemyid=null;	
  }
 };
-
+var towers=[];
 
 var isb=false;
 $("#game").click(function(event){
@@ -117,8 +117,10 @@ $("#game").click(function(event){
 		isb=true;
 	}else{
 		if(isb==true){
-			t.x=event.offsetX-event.offsetX%32;
-			t.y=event.offsetY-event.offsetY%32;
+			var tower = new Tower();
+			t.x=event.offsetX-event.offsetX % 32;
+			t.y=event.offsetY-event.offsetY % 32;
+			towers.push(tower);
 		}
 		isb=false;
 	}
@@ -151,12 +153,12 @@ function draw(){
 	if(isb==true){
 		ctx.drawImage(tlmg,xy.x,xy.y);
 	}
-	else{
-		ctx.drawImage(tlmg,t.x,t.y);
+	for(var i = 0; i<towers.length;i++){
+		ctx.drawImage(tlmg,towers[i].x,tower[i].y);
 		ctx.fillText("HP:"+treeHP,65,32);
-		t.searchEnemy();
-		if(t.aimingEnemyid!=null){
-			var id=t.aimingEnemyid;
+		towers[i].searchEnemy();
+		if(towers[i].aimingEnemyid!=null){
+			var id=towers[i].aimingEnemyid;
 			ctx.drawImage(crosshairlmg,enemies[id].x,enemies[id].y);
 		}
 	}
