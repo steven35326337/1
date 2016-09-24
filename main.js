@@ -91,7 +91,7 @@ enemies[id].hp-=this.damage;
   this.y=0;
   this.range=96;
   this.aimingEnemyid=null;
- searchEnemy:function(){
+ searchEnemy=function(){
  	this.readyShoot-=1/FPS
  	for(var i = 0;i < enemies.length;i++){
  		var distance=Math.sqrt(
