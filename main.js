@@ -74,7 +74,7 @@ function Enemy(){
 	}
 };
 var enemies=[];
-function t={
+function t({
 shoot:function(id){
 ctx.beginPath();
 ctx.moveTo(this.x + 16,this.y);
